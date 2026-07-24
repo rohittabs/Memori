@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="docs/logo.png" width="120" alt="Memori">
-</p>
-
 <h1 align="center">Memori</h1>
 
 <p align="center">
@@ -10,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://rohittabs.github.io/Memori/"><b>Open Memori</b></a>
+  <a href="https://rohittabs.github.io/memori/"><b>Open Memori</b></a>
 </p>
 
 <p align="center">
@@ -60,7 +56,7 @@ Everything you make stays on your own device. There is no account to create. The
 
 ## 2. Try it right now
 
-Go to **[rohittabs.github.io/Memori](https://rohittabs.github.io/memori/)**.
+Go to **[rohittabs.github.io/memori](https://rohittabs.github.io/memori/)**.
 
 That is it. Nothing to download, nothing to sign up for.
 
