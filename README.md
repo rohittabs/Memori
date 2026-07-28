@@ -1,8 +1,8 @@
 <h1 align="center">Memori</h1>
 
 <p align="center">
-  <b>A free flashcard app that helps you remember things forever.</b><br>
-  It comes with a music theory deck, but you can use it to learn absolutely anything.
+  <b>A free flashcard app that helps you remember things for years, not days.</b><br>
+  It comes with a music theory deck, but you can learn absolutely anything with it.
 </p>
 
 <p align="center">
@@ -19,107 +19,149 @@
 
 ---
 
+## How to read this guide
+
+This guide explains **every single button** in Memori. Every screen, every setting, every message.
+
+You do not need to read it all. Here is the short version:
+
+> Make a deck. Put cards in it. Open the deck, press **Review**, and answer honestly. Come back tomorrow. That is the whole app.
+
+Everything below is detail for when you want it.
+
+---
+
 ## Contents
 
-1. [What is this?](#1-what-is-this)
-2. [Try it right now](#2-try-it-right-now)
-3. [Put it on your phone](#3-put-it-on-your-phone)
-4. [Why flashcards at the right time beat cramming](#4-why-flashcards-at-the-right-time-beat-cramming)
-5. [Decks](#5-decks)
-6. [Cards](#6-cards)
-7. [The three ways to study](#7-the-three-ways-to-study)
-8. [The four buttons, and the exact maths behind them](#8-the-four-buttons-and-the-exact-maths-behind-them)
-9. [The four card states](#9-the-four-card-states)
-10. [**Every single statistic, explained slowly**](#10-every-single-statistic-explained-slowly)
-11. [Settings, one by one](#11-settings-one-by-one)
-12. [Your data, backup and restore](#12-your-data-backup-and-restore)
-13. [Keyboard shortcuts](#13-keyboard-shortcuts)
-14. [Questions people ask](#14-questions-people-ask)
-15. [For developers](#15-for-developers)
-16. [Licence](#16-licence)
+**Part 1: Understanding the idea**
+1. [What is a flashcard?](#1-what-is-a-flashcard)
+2. [Why your brain forgets](#2-why-your-brain-forgets)
+3. [What spaced repetition is](#3-what-spaced-repetition-is)
+4. [Who actually uses this](#4-who-actually-uses-this)
+5. [The four rules that decide whether this works for you](#5-the-four-rules-that-decide-whether-this-works-for-you)
+
+**Part 2: Getting started**
+
+6. [Opening Memori](#6-opening-memori)
+7. [Putting it on your phone](#7-putting-it-on-your-phone)
+8. [Your first five minutes](#8-your-first-five-minutes)
+
+**Part 3: Every screen, every button**
+
+9. [Getting around](#9-getting-around)
+10. [The Home screen](#10-the-home-screen)
+11. [The Deck screen](#11-the-deck-screen)
+12. [The Deck editor](#12-the-deck-editor)
+13. [The Card editor](#13-the-card-editor)
+14. [Studying: the three modes](#14-studying-the-three-modes)
+15. [Inside a study session](#15-inside-a-study-session)
+16. [The finish screen](#16-the-finish-screen)
+17. [The Revise screen](#17-the-revise-screen)
+18. [The Stats screen, every number explained](#18-the-stats-screen-every-number-explained)
+19. [The Settings screen](#19-the-settings-screen)
+
+**Part 4: Reference**
+
+20. [Every message the app can show you](#20-every-message-the-app-can-show-you)
+21. [Keyboard shortcuts](#21-keyboard-shortcuts)
+22. [Your data, backups, and moving devices](#22-your-data-backups-and-moving-devices)
+23. [Questions people ask](#23-questions-people-ask)
+24. [When something goes wrong](#24-when-something-goes-wrong)
+25. [For developers](#25-for-developers)
+26. [Licence and credits](#26-licence-and-credits)
+
+---
+---
+
+# Part 1: Understanding the idea
+
+## 1. What is a flashcard?
+
+A flashcard is a card with a **question on the front** and the **answer on the back**.
+
+```
+   FRONT                    BACK
+┌──────────────┐        ┌──────────────┐
+│              │        │              │
+│  What is     │  flip  │              │
+│  the capital │ ─────► │    Paris     │
+│  of France?  │        │              │
+│              │        │              │
+└──────────────┘        └──────────────┘
+```
+
+You look at the front. You **try to remember** the answer before you flip it. Then you flip and see if you were right.
+
+That last part is the important bit. Reading the answer straight away teaches you almost nothing. The effort of digging the answer out of your own head is what builds the memory. Scientists call this **active recall**, and it is far stronger than re-reading: active retrieval combined with spacing produced 150% better long-term retention compared to restudying.
+
+Think of it like a path through a forest. Reading your notes is like *looking* at the path. Recalling the answer is like *walking* it. Walk it enough times and it becomes a road.
+
+Paper flashcards have existed for over a century. Memori does the same thing, with one huge addition, explained in section 3.
 
 ---
 
-## 1. What is this?
+## 2. Why your brain forgets
 
-Memori is a flashcard app. A flashcard is a card with a question on the front and the answer on the back.
+In 1885, a German psychologist called **Hermann Ebbinghaus** did an experiment on himself. He memorised lists of nonsense syllables, then tested how much he still knew as days passed.
 
-You look at the question. You try to remember the answer. Then you flip the card and see if you were right.
+What he found is now called the **forgetting curve**, and it is brutal. Ebbinghaus (1885) demonstrated that 67% of learned material is forgotten within 24 hours without review.
 
-That part is not new. People have used paper flashcards for a hundred years.
+Roughly, without review:
 
-**The clever part is the timing.** Memori works out the best day to show you each card again. Not too soon, because that wastes your time on things you already know. Not too late, because by then you will have forgotten.
-
-Everything you make stays on your own device. There is no account to create. There is no server. Nobody sees your cards. The whole app is one file.
-
----
-
-## 2. Try it right now
-
-Go to **[rohittabs.github.io/memori](https://rohittabs.github.io/memori/)**.
-
-That is it. Nothing to download, nothing to sign up for.
-
-The first time it opens, Memori makes you a starter deck called **General Knowledge** with 23 music theory cards. Play with it. When you are bored of it, delete it and make your own.
-
-### Your first two minutes
-
-| Step | What to do |
+| Time since you learned it | How much you still remember |
 | --- | --- |
-| 1 | Tap the deck called **General Knowledge** |
-| 2 | Tap **Flip** |
-| 3 | Read the question, think of the answer, tap the card |
-| 4 | Tap **I know it** or **Still learning**, honestly |
-| 5 | Keep going until the deck is done |
-| 6 | Tap the **Stats** tab and see what happened |
+| Right now | 100% |
+| 20 minutes | about 60% |
+| 1 hour | about 50% |
+| 1 day | about 33% |
+| 1 week | about 25% |
+| 1 month | about 10% |
+
+This is not a personal failing. This is how every human brain works. Your brain is not a hard drive, it is a filter, and it throws away anything that does not look important.
+
+**Here is the trick.** Ebbinghaus also found that *each time* you review something, the forgetting slows down. The curve gets flatter. Reinforce it enough times and it stops dropping in any meaningful way.
+
+The forgetting curve is exponential: memory loss is biggest in the first days, and later you still forget but the rate is much, much slower.
+
+So the question becomes: **when exactly should you review?**
 
 ---
 
-## 3. Put it on your phone
+## 3. What spaced repetition is
 
-Memori can sit on your home screen with its own icon and open with no browser bar around it, exactly like an app from the app store.
+Imagine your memory of a fact is a **bucket with a small hole in the bottom**.
 
-**On an iPhone or iPad**
+- When you first learn something, the bucket is full.
+- It slowly leaks.
+- If you top it up **just before it runs empty**, two things happen:
+  1. The bucket refills.
+  2. **The hole gets smaller.** So next time it takes much longer to drain.
 
-1. Open the link in **Safari** (this does not work in Chrome on iPhone)
-2. Tap the **Share** button, the square with the arrow going up
-3. Scroll down, tap **Add to Home Screen**
-4. Tap **Add**
+That is spaced repetition. Review at growing gaps, timed so each review lands just before you would have forgotten.
 
-**On Android**
+### Why the timing matters so much
 
-1. Open the link in Chrome
-2. Tap the **three dots** in the corner
-3. Tap **Install app** or **Add to Home screen**
+Review **too early** and you are wasting time on something you already know solidly.
 
-**On a computer**
+Review **too late** and you have forgotten it, so you are relearning from scratch.
 
-1. Open the link in Chrome or Edge
-2. Look at the right side of the address bar for a small **install icon**
-3. Click it, then click **Install**
+Review at **just the right moment**, when it is slightly hard to recall, and the memory gets dramatically stronger. Giving the brain more time to almost forget a fact before reviewing it actually improves the quality of the memory.
 
-Once installed it opens instantly and keeps working normally. Your cards are saved on the device, so they are there whether you are online or not.
+That awkward "ugh, wait, I know this..." feeling is not failure. **That feeling is the entire mechanism working.**
 
----
+### What the research says
 
-## 4. Why flashcards at the right time beat cramming
+This is one of the most tested findings in all of psychology.
 
-Here is the whole idea in one picture you can imagine.
+- Cepeda et al.'s (2006) meta-analysis of 254 studies confirmed that distributed practice produces 10-30% better retention than massed practice.
+- Ebbinghaus (1885) found that practicing in intervals was more effective than rehearsing in one long stretch, meaning cramming for an exam almost never works.
+- Adaptive spacing algorithms, like the one in this app, outperform fixed spacing schedules by adjusting review intervals based on individual performance.
 
-Your memory of something is like a bucket with a small hole in the bottom. Right after you learn something, the bucket is full. Then it slowly leaks.
+### What it looks like in real numbers
 
-If you top the bucket up **just before it runs empty**, two things happen:
+Take one brand new card. Every time you see it, you press **Good**, meaning you remembered it. Here is exactly what Memori schedules:
 
-1. The bucket fills back up.
-2. **The hole gets a little smaller.** So next time it takes much longer to drain.
-
-That is the entire trick. Review at the right moment and the gaps between reviews grow bigger and bigger.
-
-### What that looks like in real numbers
-
-Take a brand new card. Every time you see it you press **Good**, meaning you remembered it. Here is exactly what Memori does:
-
-| Which review | Gap before you see it again |
+| Which review | You see it again in |
 | --- | --- |
 | 1st | 1 day |
 | 2nd | 3 days |
@@ -128,229 +170,623 @@ Take a brand new card. Every time you see it you press **Good**, meaning you rem
 | 5th | 50 days |
 | 6th | 125 days |
 
-Look at what happened there. Six short reviews spread over about six months, and now the card only needs checking about three times a year.
+Look at what happened. **Six short reviews spread over about six months**, and now that fact only needs checking about three times a year. It is, for practical purposes, yours.
 
-Compare that to cramming. If you read the same fact 6 times in one evening, you know it tonight and you have forgotten it by Friday. Same 6 repetitions, completely different result, purely because of **when** they happened.
+Now compare cramming. Read the same fact 6 times in one evening and you will know it tonight and have lost it by Friday. Same six repetitions. Completely different outcome. The only difference is **when** they happened.
 
 ---
 
-## 5. Decks
+## 4. Who actually uses this
 
-A **deck** is a box of cards about one topic. "Spanish verbs" is a deck. "Guitar chords" is a deck. "Names of everyone at work" is a deck.
+This is not a study hack from the internet. It is standard equipment in some of the hardest fields there are.
 
-### Making one
+### Doctors and medical students
 
-Tap **Decks**, then the **+** button.
+This is the biggest user group in the world, by a distance. Medical students have to memorise an amount of detail that is genuinely absurd: every muscle, every drug, every dose, every interaction, every rare disease and its symptoms.
+
+In one survey, most students identified as Anki users (94%), with 87.8% believing it significantly contributes to their success in modules. Anki is the best known spaced repetition app, and Memori works on the same principle.
+
+The results show up in exams. In one cohort study, the percentage of "mature" cards a student had was the only statistically significant predictor of course exam performance, explaining over a third of score variability.
+
+That word **mature** matters, and Memori shows you the same number on your Stats screen. Section 18 explains it.
+
+Interestingly, 56.6% reported multitasking with Anki during activities like exercising or eating, which tells you something about how these apps get used in practice: small pockets of time, every day.
+
+### Language learners
+
+The classic use. One card per word, per phrase, per character.
+
+This is where Memori's **audio** feature earns its place. You can record yourself saying a word and compare it to a native speaker, which is worth more than reading it fifty times. Section 13 covers recording.
+
+### Musicians
+
+Note names, key signatures, intervals, chord formulas, how a mode sounds. The starter deck that ships with Memori is exactly this.
+
+The **image** feature matters here. A card can show a bar of sheet music and ask what chord it is.
+
+### Everyone else
+
+- **Law students**: case names, statutes, definitions
+- **Pilots**: checklists, regulations, airport codes
+- **Nurses**: drug names and dosages
+- **Programmers**: syntax, shortcuts, commands
+- **Anyone with a new job**: names and faces of colleagues, using photos
+- **Anyone taking any exam at all**
+
+The app does not know or care what your cards contain.
+
+---
+
+## 5. The four rules that decide whether this works for you
+
+Read these four things and you will avoid every mistake beginners make.
+
+### Rule 1: Be honest with the buttons
+
+Memori cannot see you. It only knows which button you pressed.
+
+If you press **Good** on a card you barely dragged out of your memory, you have just told the app "make the gap two and a half times longer." You will then see that card in 50 days when you needed it in 5, you will fail it, and you will conclude the app does not work.
+
+Be honest and it works. Be generous with yourself and it collapses. It really is that simple.
+
+Experienced users have a trick: **say the answer out loud before you flip.** It stops you from reading the answer and thinking "yeah, I knew that," when you did not.
+
+### Rule 2: One card, one fact
+
+The single most common beginner mistake is making cards that are too big.
+
+**Bad card:**
+
+> Front: Explain the circle of fifths
+> Back: (nine sentences)
+
+That is not a flashcard, it is a lecture wearing a costume. You will never be able to grade it honestly, because you will always get *part* of it right.
+
+**Good cards:**
+
+> Front: How many sharps are in the key of D major? → Back: Two
+> Front: Which note comes after G in the circle of fifths? → Back: D
+> Front: What does the circle of fifths help you find? → Back: Key signatures and closely related keys
+
+Small cards are answered faster, remembered better, and are far less painful to review. If a card takes you more than about 15 seconds, split it up.
+
+### Rule 3: A little, every day
+
+Ten minutes every day beats two hours every Sunday. The whole system is built around daily gaps. Skipping days creates a pile-up, and a pile-up makes you quit.
+
+This is why Memori has a **streak** counter and a **daily goal**.
+
+### Rule 4: Do not add too many new cards at once
+
+Every new card you add today is a small permanent obligation. Roughly, **each new card generates about 8 to 10 reviews over the following year**.
+
+So 20 new cards a day means roughly 200 daily reviews once things settle. That is why Memori defaults to 20 new per day and enforces it. The limit is not there to slow you down, it is there to stop future-you from drowning.
+
+---
+---
+
+# Part 2: Getting started
+
+## 6. Opening Memori
+
+Go to **[rohittabs.github.io/memori](https://rohittabs.github.io/memori/)**.
+
+That is it. No download, no sign up, no account, no payment.
+
+The first time it opens, Memori creates a starter deck called **General Knowledge** with 23 music theory cards, so you have something to press buttons on. Delete it whenever you like.
+
+**Where your stuff is kept:** on your own device, inside your browser's storage. Not on a server. Nobody, including me, can see your cards. This also means it does not sync between devices by itself, see section 22.
+
+---
+
+## 7. Putting it on your phone
+
+Memori can live on your home screen with its own icon, and open with no browser bar around it, exactly like an app from the app store.
+
+**On iPhone or iPad**
+
+1. Open the link **in Safari**. This does not work in Chrome on iPhone.
+2. Tap the **Share** button, the square with an arrow pointing up.
+3. Scroll down and tap **Add to Home Screen**.
+4. Tap **Add**.
+
+**On Android**
+
+1. Open the link in Chrome.
+2. Tap the **three dots** menu.
+3. Tap **Install app**, or **Add to Home screen**.
+
+**On a computer**
+
+1. Open the link in Chrome or Edge.
+2. Look at the right hand end of the address bar for a small **install icon**.
+3. Click it, then click **Install**.
+
+Once installed it launches instantly and works whether you are online or not, because your cards live on the device.
+
+---
+
+## 8. Your first five minutes
+
+| Step | What to do | What you should see |
+| --- | --- | --- |
+| 1 | Tap the deck **General Knowledge** | The deck screen, with 23 cards listed |
+| 2 | Tap **Flip** | A question, with "Tap to reveal answer" underneath |
+| 3 | Read the question. **Try to answer it in your head.** | Nothing yet, this bit is you |
+| 4 | Tap the card, or tap **Show answer** | The answer appears |
+| 5 | Tap **Still learning** or **I know it**, honestly | The next card |
+| 6 | Keep going to the end | The finish screen with your accuracy |
+| 7 | Tap **Done**, then go to **Stats** | Your numbers, now with something in them |
+
+Now do the real thing:
+
+| Step | What to do |
+| --- | --- |
+| 8 | Go back to the deck and tap **Review** instead of Flip |
+| 9 | Notice you now get **four** buttons instead of two, each with a number of days on it |
+| 10 | Those numbers are real. This mode is the one that schedules your cards |
+
+The difference between Flip and Review is the single most important thing to understand about this app. Section 14 covers it properly.
+
+---
+---
+
+# Part 3: Every screen, every button
+
+## 9. Getting around
+
+Memori has **five main places**. How you reach them depends on your screen size, but they are the same five.
+
+### On a computer (wide screen)
+
+A **sidebar** runs down the left:
+
+| Item | Icon | What it does |
+| --- | --- | --- |
+| **Decks** | Two stacked cards | Home screen, your deck list |
+| **Study** | Play triangle | Starts reviewing whatever is due, right now |
+| **Revise** | Circular arrow | Practice screen, nothing is recorded |
+| **Stats** | Line chart | All your numbers |
+| **Settings** | Gear | Preferences and your data |
+
+Below the sidebar there is a **Study now** button in a pink to purple gradient, with a number next to it. That number is how many cards are due. It does exactly the same thing as the sidebar **Study** item, it is just placed where your hand already is.
+
+### On a phone (narrow screen)
+
+A **tab bar** across the bottom, with the same five: **Home, Study, Revise, Stats, Settings**.
+
+Five is the maximum any interface should put in a bottom bar, because tap targets get too small beyond that. Memori sits exactly at that limit.
+
+There is also a round **+** button floating above the tab bar on the right. It creates a new deck.
+
+### One thing worth knowing about Study
+
+**Study is not a place, it is an action.** Tapping it does not open a screen called Study. It looks at every deck, finds the one with the most cards due, and starts a review session there immediately.
+
+If **nothing** is due anywhere, it takes you to the **Revise** screen instead and tells you nothing is due. It will not silently start a random session.
+
+### Getting back
+
+Any screen you drill into has a **back arrow** in the top left. During a study session the same corner has an **X**, which leaves the session.
+
+---
+
+## 10. The Home screen
+
+This is where you land. From top to bottom:
+
+### The header
+
+| Element | What it is |
+| --- | --- |
+| **Memori** logo and name | Top left |
+| **"Remember on purpose"** | The tagline, sits under the name |
+| **Greeting** | "Good morning", "Good afternoon" or "Good evening", based on your device clock |
+| **Gear icon** | Top right, jumps straight to Settings |
+
+### The hero card (the big coloured one)
+
+The most eye-catching thing on the screen, a pink to purple gradient block.
+
+| Element | What it shows |
+| --- | --- |
+| **Kicker text** | The greeting again, in small capitals |
+| **Big number** | How many cards are due today |
+| **Label** | "cards due today", or "card due today" if it is exactly 1 |
+| **Button** | Says **Review now** if anything is due, or **Study a deck** if nothing is |
+
+**How the big number is worked out.** This is not simply "everything that is overdue." Memori also respects your daily limits:
+
+```
+new allowance    = your new-per-day limit  minus  new cards already done today
+review allowance = your reviews-per-day limit minus reviews already done today
+
+Due today = min(new allowance, new cards actually waiting)
+          + min(review allowance, review cards actually waiting)
+```
+
+**Example.** Your limit is 20 new per day. You have three decks with 30 brand new cards each, so 90 are technically waiting.
+
+```
+new allowance = 20 - 0 done = 20
+new waiting   = 90
+smaller one   = 20
+
+Due today = 20
+```
+
+It says **20**, not 90, because 20 is genuinely all you are allowed today. Study 12 of them and it recalculates to 8.
+
+### The two small cards
+
+| Card | What it shows |
+| --- | --- |
+| **Day streak** | A flame icon, a number, and a ring that fills as the streak grows |
+| **Min today** | Minutes you have studied today |
+
+**How the streak is counted.** Memori starts at today. If you have studied today, it counts today. If you have not studied today *yet*, it starts from yesterday instead, so your streak is not destroyed at one minute past midnight. Then it walks backwards a day at a time and stops at the first day with nothing.
+
+So if you studied Monday, Tuesday and Wednesday, your streak on Wednesday is **3**. Skip Thursday entirely and on Thursday evening it still says 3, because it falls back to Wednesday. Skip Friday as well and it drops to 0.
+
+### Your collection
+
+A white card containing a **donut chart** and a legend.
+
+- The number in the middle of the donut is your **total card count**
+- The word **CARDS** sits under it
+- Four coloured slices, one per card state
+
+| Colour | State | Meaning |
+| --- | --- | --- |
+| Teal | **Mature** | Interval of 21 days or more, you properly know it |
+| Blue | **Young** | Interval of 7 to 20 days, it is sticking |
+| Amber | **Learning** | Interval of 1 to 6 days, still bedding in |
+| Grey | **New** | Never answered |
+
+Each legend row shows the state name and a count.
+
+**How a slice is sized:** that state's count divided by your total, as a percentage. 100 cards with 40 New means the grey slice takes 40% of the ring. A slice with almost nothing in it is not drawn at all, so a single card does not become an ugly sliver.
+
+**What to look for:** at the start your donut is nearly all grey. That is normal. Over months you want the **teal** slice growing. That slice is the entire point of the app.
+
+**All stats ›** in the corner jumps to the full Stats screen.
+
+### Decks
+
+A heading with a **+ New** button beside it, then one tile per deck.
+
+Each deck tile shows:
+
+| Element | What it shows |
+| --- | --- |
+| **Coloured stripe** | Down the left edge, in the deck's own colour |
+| **Deck name** | Bold |
+| **Description** | Small grey text, if you wrote one |
+| **Card count** | For example "23 cards" |
+| **Due badge** | For example "8 due", only when something is due |
+| **Percentage ring** | A circle on the right showing how much of that deck is Mature |
+
+The ring percentage is: **mature cards in that deck ÷ total cards in that deck × 100**. A deck of 50 cards with 12 mature shows `12 ÷ 50 = 0.24`, so **24%**.
+
+Tap anywhere on a tile to open that deck.
+
+### If you have no decks
+
+You get an empty state instead:
+
+> **No decks yet**
+> Create your first deck to start learning. Add text, images, and audio to any card.
+> **[ Create a deck ]**
+
+---
+
+## 11. The Deck screen
+
+Tap any deck to get here.
+
+### The coloured header
+
+A block in the deck's own colour, containing:
+
+| Element | What it is |
+| --- | --- |
+| **Back arrow** | Top left, returns to Home |
+| **Pencil icon** | Top right, opens the Deck editor |
+| **Bin icon** | Top right, deletes the deck |
+| **Deck name** | Large |
+| **Description** | Underneath, if you wrote one |
+| **Three numbers** | Cards, % mature, due now |
+
+**The bin icon asks first.** You get a confirmation naming the deck, and deleting removes every card in it plus every image and sound those cards held. There is no undo.
+
+### The three mode buttons
+
+Side by side: **Flip**, **Review**, **Quiz**. Review is highlighted because it is the important one.
+
+Underneath them is a line of small text:
+
+> Review is the scheduled mode, it updates your cards and counts towards statistics. Flip and Quiz are revision, they change nothing.
+
+Section 14 explains all three properly.
+
+### The four state boxes
+
+A 2x2 grid: **New**, **Learning**, **Young**, **Mature**. Each box shows a coloured dot, the state name, a count, and what percentage of the deck that is.
+
+### The card list
+
+A heading such as "23 CARDS" with **+ Add card** beside it.
+
+Then a **search box** reading "Search this deck", and next to it a **star button**.
+
+- **Search** matches the question text, the answer text, **and** the tags. Typing `scales` finds every card tagged "scales" plus any card with that word in it.
+- **Star button** toggles "show only starred cards". Tap again to show all.
+
+Then one row per card:
+
+| Element | What it shows |
+| --- | --- |
+| **Coloured stripe** | Left edge, the deck colour |
+| **Front text** | Bold, the question |
+| **Back text** | Grey, the answer |
+| **State chip** | NEW, LEARNING, YOUNG or MATURE |
+| **Interval chip** | When it is next due: "New", "due", "in 1d", "in 2w", "in 3mo" |
+| **Tag chips** | Any tags you added |
+| **Image icon** | If the card has pictures |
+| **Audio icon** | If the card has sound |
+| **Bin icon** | On the right, deletes that one card |
+
+Tap a row to open the Card editor. The bin asks "Delete this card?" first.
+
+### If the deck is empty or nothing matches
+
+> **This deck is empty** / Add your first card to begin.
+
+or, when a search finds nothing:
+
+> **No cards match your search.**
+
+---
+
+## 12. The Deck editor
+
+Opens when you tap **+ New**, the **+** floating button, or the **pencil** on a deck.
+
+The title reads **New deck** or **Edit deck**.
 
 | Field | What it does |
 | --- | --- |
-| **Name** | What the deck is called. Keep it short, it has to fit on a tile. |
-| **Description** | A note to yourself about what is inside. You can leave it empty. |
-| **Colour** | Pick one of eight. Purely so you can spot decks quickly. |
+| **Deck name** | The name. Placeholder shows "e.g. French Verbs". Required. |
+| **Description** | Optional note to yourself. Placeholder shows "Optional". |
+| **Color** | Eight swatches |
 
-The eight colours are Magenta, Grape, Indigo, Ocean, Forest, Gold, Sunset and Slate.
+The eight colours are **Magenta, Grape, Indigo, Ocean, Forest, Gold, Sunset and Slate**. The selected one gets an outline. Colour is purely visual, it helps you tell decks apart at a glance and it is what colours the deck's chips in the Coming up forecast.
 
-### What the deck tile shows you
+At the bottom: **Cancel**, and **Create deck** (or **Save** when editing).
 
-Each deck on the Decks screen shows:
-
-- Its name and colour
-- How many cards are inside
-- A **ring** around the edge showing how much of it you have mastered
-- A **number badge** if cards are waiting for you today
-
-### Editing or deleting
-
-Open the deck, tap the **pencil** to edit it, or the **bin** to delete it.
-
-Deleting a deck deletes every card in it, and every picture and sound in those cards. It cannot be undone. Memori will ask you first.
+The save button is faded out until you type a name.
 
 ---
 
-## 6. Cards
+## 13. The Card editor
 
-A card has a **front** and a **back**. Normally the front is the question and the back is the answer.
+Opens when you tap **+ Add card** or tap any existing card row.
 
-### What you can put on each side
+The title reads **New card** or **Edit card**.
 
-Both sides can hold all of these at the same time:
+### The two sides
 
-| Thing | How many | Good for |
-| --- | --- | --- |
-| **Text** | any length | The question, the answer, an explanation |
-| **Pictures** | as many as you like | Diagrams, sheet music, photos, handwriting |
-| **Sounds** | as many as you like | Pronunciation, a chord, a bird call, your own voice |
+The editor has a **Front (question)** section and a **Back (answer)** section. They are identical in what they can hold.
 
-### Adding a picture
+For each side:
 
-Tap **Add image** on the side you want, then pick a file from your device. Add another and it sits next to the first one.
-
-### Adding a sound
-
-You have two ways.
-
-- **Upload**: pick an audio file you already have.
-- **Record**: tap the microphone button and speak. Memori records straight from your device. Tap again to stop.
-
-Recording is genuinely useful. If you are learning a language, recording yourself saying a word and comparing it to a native speaker is worth more than reading it fifty times.
-
-### The two extras
-
-| Extra | What it does |
+| Control | What it does |
 | --- | --- |
-| **Hint** | A small nudge you can reveal while studying, without seeing the whole answer. Good for "starts with a B" or "think about the left hand". |
-| **Star** | Marks a card as one that keeps catching you out. You can then filter the deck to show only starred cards. |
+| **Text box** | The words. Front placeholder: "Type the question". Back placeholder: "Type the answer". Any length. |
+| **Image button** | Attach pictures. You can add as many as you like. |
+| **Audio button** | Attach sound files. As many as you like. |
+| **Record button** | Records straight from your microphone. Tap it and it becomes **Stop**. |
 
-### Tags
+Attached items appear as thumbnails or players with a small **x** on each to remove it.
 
-You can give a card tags, typed as a list separated by commas, like `scales, minor, exam`.
+**About recording.** Your browser will ask permission for the microphone the first time. If you decline, you get the message "Microphone permission needed". Some browsers do not support it at all, in which case you get "Recording not supported here".
 
-You get a maximum of 8 tags per card. Blank entries are thrown away, so `a, , b` becomes just `a` and `b`.
+Recording is genuinely one of the most useful features here. For a language, recording yourself saying a word and comparing it to a native speaker teaches your mouth as well as your memory.
 
-Tags are searchable. Typing `scales` into the deck search box finds every card tagged with it, plus every card with that word in the question or answer.
+### The extras
 
-### Resetting one card
+| Field | What it does |
+| --- | --- |
+| **Hint (optional)** | A small nudge. Placeholder: "A little nudge". During study a **Show hint** button appears, and tapping it reveals this without showing the answer. Good for "starts with B" or "think about the left hand". |
+| **Tags, comma separated** | Placeholder: "e.g. music, theory". Type a list. These become searchable chips. |
+| **Star icon** | Marks the card as one that keeps catching you out. Starred cards can be filtered on the deck screen. |
 
-Open a card and tap **Reset progress**. That card goes back to being brand new, as if you had never seen it. Its reviews, interval and ease are all wiped.
+### On an existing card only
 
-Your statistics are **not** wiped. Your study history stays intact. This only resets the card's schedule.
+A small line of statistics:
+
+> Reviews 4, lapses 1, interval 20d
+
+- **Reviews** is how many times you have answered it
+- **Lapses** is how many times you pressed Again on it
+- **Interval** is the current gap in days
+
+Next to it, **Reset progress**. This asks:
+
+> Reset this card to new? It becomes due now. Past reviews stay in your stats.
+
+So the card's schedule goes back to zero, but your history is not rewritten. Useful when you realise you never really learned something.
+
+### At the bottom
+
+**Cancel**, and **Add card** (or **Save card** when editing).
+
+If you try to save without both a front and a back, you get: **"Add a front and a back"**.
 
 ---
 
-## 7. The three ways to study
+## 14. Studying: the three modes
 
-Open a deck and you get three buttons. They do genuinely different things.
+This section is the most important one in the guide.
+
+### The short version
+
+| Mode | Cards it shows | Grades | Does it change your schedule? | Does it count in Stats? |
+| --- | --- | --- | --- | --- |
+| **Flip** | Every card in the deck, shuffled | 2 buttons | **No** | **No** |
+| **Review** | Only cards actually due, oldest first | 4 buttons | **Yes** | **Yes** |
+| **Quiz** | Multiple choice from the deck | Automatic | **No** | **No** |
+
+**Review is the real one.** Flip and Quiz are practice. They change nothing at all.
 
 ### Flip
 
-**Every card in the deck, in random order.**
-
-You see the question. You tap. You see the answer. You tell Memori whether you knew it, using two buttons:
+Every card in the deck in random order. You see the question, tap, see the answer, then choose:
 
 - **Still learning**
 - **I know it**
 
-Use this when you want to run through a whole deck casually, or when you are learning a deck for the first time and just want to see everything.
+Use it when you want to run casually through a deck, or when you are meeting a deck for the first time and just want to see what is in it.
+
+Because it is untracked, you can do it as many times as you like without any consequence.
 
 ### Review
 
-**Only the cards that are due today, oldest first.**
+**This is the mode that does the real work.**
 
-This is the important one. This is the mode that keeps a big collection under control, and it is the one that uses the timing system properly.
+It shows only cards that are actually due, oldest first, and respects your daily limits. You get four buttons, each labelled with the exact gap it will schedule.
 
-You get four buttons instead of two, and each button is labelled with the exact gap it will schedule. More on those in the next section.
-
-If nothing is due, Memori says "Nothing due. Great work!" and refuses to start. That is not a bug. It means you are finished for the day, and studying cards early would make them stick less well.
+If nothing is due it will not start, and you get the message **"Nothing due. Great work!"** That is not a bug. It means you are finished for today, and studying early would make the cards stick *less* well.
 
 ### Quiz
 
-**Multiple choice.**
+Multiple choice. Memori shows the question and four possible answers: the right one, plus three borrowed from other cards' answers in the same deck.
 
-Memori shows the question and four possible answers. One is right. The other three are borrowed from the answers of other cards in the same deck.
+You need **at least 2 cards with answer text** for Quiz to work, otherwise you get **"Need at least 2 cards with answers"**, because it has nowhere to steal wrong options from.
 
-You need at least **2 cards with answer text** in the deck for Quiz to work, because it has to have somewhere to steal the wrong answers from.
+Be aware Quiz is **easier** than the other modes. Recognising the right answer in a list is much easier than pulling it out of your head cold. Treat it as a light session, not your main method.
 
-Note that Quiz is easier than the other modes. Recognising the right answer in a list is much easier than pulling it out of your head cold. Use Quiz for a light session, not as your only method.
+### Why Flip and Quiz do not count
 
-### They all feed the same schedule
+Earlier versions of Memori let Flip and Quiz change your schedule, which caused a real problem: a casual flip through a deck would silently reschedule 20 cards, and then the app would tell you nothing was due for two days.
 
-This is worth saying clearly, because it is not obvious.
+Now they are honest practice. During a Flip or Quiz session the header says so:
 
-| Mode | What you did | How Memori grades it |
-| --- | --- | --- |
-| Flip | Tapped "I know it" | Same as pressing **Good** |
-| Flip | Tapped "Still learning" | Same as pressing **Again** |
-| Quiz | Picked the right answer | Same as pressing **Good** |
-| Quiz | Picked a wrong answer | Same as pressing **Again** |
-| Review | Pressed any of the four | Exactly that button |
+> General Knowledge · Revising, Flip, nothing is saved
 
-So a casual Flip session still moves your cards forward properly. You never waste a session.
+and the two buttons show **no** day numbers, because no days are being scheduled.
 
 ---
 
-## 8. The four buttons, and the exact maths behind them
+## 15. Inside a study session
 
-In **Review** mode you get four buttons. Press the one that honestly describes what just happened.
+The session takes over the whole screen. Top to bottom:
+
+### The top bar
+
+| Element | What it does |
+| --- | --- |
+| **X button** | Leaves the session. Progress on cards you already answered is kept. |
+| **Progress bar** | Fills as you work through the queue |
+| **Counter** | For example "1 / 23" |
+
+Underneath, a line naming the deck and the mode:
+
+- `General Knowledge · Spaced review` in Review mode
+- `General Knowledge · Revising, Flip, nothing is saved` in Flip
+- `General Knowledge · Revising, Quiz, nothing is saved` in Quiz
+
+### The card
+
+A large white card with a small label at the top reading **QUESTION**, then the text.
+
+If the card has images they appear here. If it has audio, a player appears.
+
+At the bottom of the card: **Tap to reveal answer**.
+
+If the card has a hint, a **Show hint** button appears. Tapping it reveals the hint only.
+
+### Revealing
+
+Tap the card itself, or press the **Show answer** button underneath.
+
+The label changes to **ANSWER** and the back of the card shows, including its own images and audio.
+
+**Audio autoplay.** If the setting is on (it is by default), the first audio clip on the back plays automatically when you reveal.
+
+### Grading in Flip mode
+
+Two buttons:
+
+| Button | Colour | Meaning |
+| --- | --- | --- |
+| **Still learning** | Red | I did not know it |
+| **I know it** | Teal | I knew it |
+
+No day numbers, because nothing is being scheduled.
+
+### Grading in Review mode
+
+Four buttons, each with the real gap printed underneath:
 
 | Button | Press it when |
 | --- | --- |
-| **Again** | You did not know it. You got it wrong, or you had no idea. |
-| **Hard** | You got it right, but it was a struggle and took a while. |
+| **Again** | You did not know it. Wrong, or no idea. |
+| **Hard** | You got it right, but it was a struggle. |
 | **Good** | You got it right with normal effort. **This is the one you will press most.** |
-| **Easy** | You knew it instantly, without thinking. It felt too obvious. |
+| **Easy** | You knew it instantly. Felt too obvious. |
 
-### The two numbers hiding on every card
+**The maths behind those four buttons.**
 
-Every card secretly carries two numbers.
+Every card carries two hidden numbers:
 
-**1. The interval.** How many days until you see this card again. A new card starts at 0.
-
-**2. The ease.** How generous Memori is with this particular card. It starts at **2.50** and it never drops below **1.30**. Think of it as a multiplier. An ease of 2.50 means "next gap is two and a half times the last one".
-
-### What each button does to those numbers
+1. **Interval**, how many days until you see it again. New cards start at 0.
+2. **Ease**, how generous the app is with this particular card. Starts at **2.50**, never drops below **1.30**.
 
 | Button | Ease changes by | New interval becomes |
 | --- | --- | --- |
-| **Again** | minus 0.20 | 0, so it comes back today, and a lapse is recorded |
+| **Again** | minus 0.20 | 0, comes back today, and a lapse is recorded |
 | **Hard** | minus 0.15 | old interval × 1.2 |
 | **Good** | no change | old interval × ease |
 | **Easy** | plus 0.15 | old interval × ease × 1.3 |
 
-There are two special cases at the very start, before the multiplying makes sense:
+With two special cases at the very start, before multiplying makes sense:
 
-- The **very first** time you answer a card: Good and Hard both give **1 day**, Easy gives **2 days**.
-- The **second** time: Good gives **3 days**.
-- From the **third** time onwards, the multiplying above kicks in.
+- **First** time you answer a card: Good and Hard both give **1 day**, Easy gives **2 days**
+- **Second** time: Good gives **3 days**
+- **Third** time onwards, the multiplying above applies
 
-### A full worked example
-
-Take a card sitting at **20 days** with an ease of **2.50**. Here is what each button does, with the arithmetic written out.
-
-**If you press Again**
+**A full worked example.** A card sitting at **20 days** with ease **2.50**:
 
 ```
-ease:      2.50 - 0.20  = 2.30
-interval:  back to 0
-result:    the card returns today, and lapses goes up by 1
+Press Again:
+   ease:     2.50 - 0.20 = 2.30
+   interval: back to 0
+   result:   returns today, lapses +1
+
+Press Hard:
+   ease:     2.50 - 0.15 = 2.35
+   interval: 20 × 1.2     = 24
+   result:   24 days
+
+Press Good:
+   ease:     unchanged     = 2.50
+   interval: 20 × 2.50     = 50
+   result:   50 days
+
+Press Easy:
+   ease:     2.50 + 0.15   = 2.65
+   interval: 20 × 2.65 × 1.3 = 68.9, rounds to 69
+   result:   69 days
 ```
 
-**If you press Hard**
+Note Easy uses the **new** ease of 2.65, not the old 2.50. That is why Easy pulls away so quickly.
 
-```
-ease:      2.50 - 0.15  = 2.35
-interval:  20 × 1.2     = 24
-result:    24 days
-```
+You never need to remember any of this. Each button prints its own answer.
 
-**If you press Good**
+**How ease drifts over time.**
 
-```
-ease:      unchanged     = 2.50
-interval:  20 × 2.50     = 50
-result:    50 days
-```
-
-**If you press Easy**
-
-```
-ease:      2.50 + 0.15   = 2.65
-interval:  20 × 2.65 × 1.3 = 68.9, rounded to 69
-result:    69 days
-```
-
-Notice that Easy uses the **new** ease of 2.65, not the old 2.50. That is why Easy pulls away so fast.
-
-You do not have to remember any of this. Each button is printed with the number of days it will give you, so you can just look.
-
-### Why pressing Good on a card you barely remembered is a bad idea
-
-Memori cannot see you. It only knows which button you pressed. Press Good on something you actually fumbled and you have told it "make the gap two and a half times longer". You will then be shown that card in 50 days when you needed it in 5, you will fail it, and you will wonder why the app is not working.
-
-Being honest with the buttons is the single biggest thing that decides whether this works for you.
-
-### Ease over many reviews
-
-A card you keep finding hard drifts downwards, and its gaps grow more slowly:
+A card you keep finding hard:
 
 ```
 Start:                     ease 2.50
@@ -359,7 +795,7 @@ Press Hard:  2.35 - 0.15 = 2.20
 Press Again: 2.20 - 0.20 = 2.00
 ```
 
-A card you keep finding easy drifts upwards, and its gaps grow faster:
+A card you keep finding easy:
 
 ```
 Start:                     ease 2.50
@@ -367,208 +803,160 @@ Press Easy:  2.50 + 0.15 = 2.65
 Press Easy:  2.65 + 0.15 = 2.80
 ```
 
-The floor is 1.30. A card can never get harsher than that no matter how many times you fail it.
+The floor is 1.30. No matter how many times you fail a card, it can never get harsher than that.
+
+### Grading in Quiz mode
+
+Tap one of the four options. Memori tells you immediately whether it was right, then a **Next** button appears, which reads **See results** on the final question.
 
 ---
 
-## 9. The four card states
+## 16. The finish screen
 
-Every card is in exactly one of four states at any moment. The state is decided **only** by its interval. Nothing else.
+When the queue empties you get a summary.
 
-| State | Rule | In plain words |
-| --- | --- | --- |
-| **New** | Never answered | You have not seen it yet |
-| **Learning** | Interval of 1 to 6 days | You are still getting to grips with it |
-| **Young** | Interval of 7 to 20 days | It is starting to stick |
-| **Mature** | Interval of 21 days or more | You properly know this one |
+| Element | What it shows |
+| --- | --- |
+| **Big ring** | Your accuracy for this session, as a percentage |
+| **Praise line** | Depends on how you did, see below |
+| **Correct** | How many you got right |
+| **Time** | How long the session took, such as "4m 12s" |
+| **Mastered** | How many cards crossed into Mature during this sitting |
 
-Some quick examples so the boundaries are clear:
+**The praise line:**
 
-| Card | Interval | State |
-| --- | --- | --- |
-| Never studied | none | New |
-| Answered once | 1 day | Learning |
-| A few reviews in | 6 days | Learning |
-| One more review | 7 days | Young |
-| Getting there | 20 days | Young |
-| One more review | 21 days | **Mature** |
-| Long term | 125 days | Mature |
+| When | It says |
+| --- | --- |
+| Review, 80% or above | Brilliant work |
+| Review, 50% to 79% | Nicely done |
+| Review, under 50% | Keep practicing |
+| **Flip or Quiz, any score** | **Revision finished, nothing was saved** |
 
-**21 days is the line.** It is the number the flashcard world has settled on for "this has moved into long term memory". It is a convention, not a law of nature, but it is a sensible one.
+Two buttons at the bottom:
 
-These four states are what every ring, every donut and every coloured bar in the app is counting. Once you understand them, the whole Stats screen becomes readable.
+- **Study again** starts another session in the same deck
+- **Done** returns you to where you were
 
 ---
 
-## 10. Every single statistic, explained slowly
+## 17. The Revise screen
+
+Reached from **Revise** in the sidebar or bottom bar, and automatically when you press Study with nothing due.
+
+**What this screen is for:** practising freely without touching anything. Nothing you do here is recorded, scheduled, or counted.
+
+### What is on it
+
+**An intro line**, which changes depending on your situation:
+
+- If cards are due: *"You have 8 cards waiting in Study. Revising here is extra practice on top of that."*
+- If nothing is due: *"Nothing is due right now. Revising will not disturb your schedule."*
+
+**A review button**, shown only when cards are actually due, reading for example **Review 8 cards**. This starts a proper tracked session, so you do the real work first if you want to.
+
+**Revise a deck**, a list of every deck you own. Each row has:
+
+- A coloured stripe in the deck's own colour
+- The deck name
+- The card count
+- A **Flip** button
+- A **Quiz** button
+
+**A closing note:**
+
+> Revising never changes a card's schedule, its state or your statistics. Every card comes back exactly as it was.
+
+### Why this exists
+
+Two reasons.
+
+First, sometimes you want to run through a deck before an exam without disturbing months of carefully built scheduling. This is the safe place to do that.
+
+Second, before this screen existed, pressing **Study** with nothing due would silently start a Flip session on some random deck, which was baffling. Now it brings you here and explains itself.
+
+---
+
+## 18. The Stats screen, every number explained
 
 This is the part people find confusing, so here is every number, what it means, the exact sum behind it, and a worked example.
 
-### The example we will use throughout
+### The example used throughout
 
-Imagine you have studied on three days. This is all Memori knows about you:
+Imagine you have studied on three days. This is everything Memori knows about you:
 
-| Day | Cards studied | Got right | Time spent |
+| Day | Cards studied | Got right | Time |
 | --- | --- | --- | --- |
 | Monday | 10 | 8 | 5 minutes |
 | Tuesday | 12 | 11 | 6 minutes |
 | **Wednesday (today)** | **8** | **7** | **4 minutes** |
 | **Totals** | **30** | **26** | **15 minutes** |
 
-Keep that table in mind. Every number below is worked out from it.
+Every number below comes from that table.
 
 ---
 
-### 10.1 The Home screen
+### 18.1 The six boxes at the top
 
-#### Greeting
+#### Current streak
 
-Says "Good morning", "Good afternoon" or "Good evening" depending on the time on your device. Nothing is calculated. It is just being polite.
+Days in a row you have studied, counting back from today, with the midnight grace period described in section 10.
 
-#### Due today
+Underneath it shows your **best streak**, the longest run you have ever managed. Memori lists every day you studied, sorts them, and finds the longest unbroken chain.
 
-**What it is:** how many cards you can actually study right now, across every deck.
-
-**How it is worked out:** it is not simply "everything that is overdue". Memori also respects your daily limits. The sum is:
+**Example.** You studied on:
 
 ```
-new cards available    = your new-per-day limit  minus  new cards already done today
-review cards available = your reviews-per-day limit minus reviews already done today
+Jan 1, Jan 2, Jan 3,  [gap],  Jan 8, Jan 9,  [gap],  Jan 15
 
-Due today = the smaller of (new cards available, new cards actually waiting)
-          + the smaller of (review cards available, review cards actually waiting)
+Chain 1: Jan 1 to Jan 3 = 3 days
+Chain 2: Jan 8 to Jan 9 = 2 days
+Chain 3: Jan 15         = 1 day
+
+Best streak = 3 days
 ```
 
-**Worked example.** Your limit is 20 new per day. You have 3 decks with 30 brand new cards each, so 90 new cards are technically waiting.
-
-```
-new cards available  = 20 - 0 already done = 20
-new cards waiting    = 90
-smaller of the two   = 20
-
-Due today = 20
-```
-
-It says **20**, not 90, because 20 is genuinely all you are allowed today. If you then study 12 of them, it recalculates:
-
-```
-new cards available  = 20 - 12 = 8
-Due today = 8
-```
-
-#### Streak
-
-**What it is:** how many days in a row you have studied, counting backwards from today.
-
-**How it is worked out:** Memori looks at today. If you have studied today it starts counting from today. If you have not studied today yet, it starts from yesterday instead, so your streak is not destroyed at one minute past midnight. Then it walks backwards one day at a time and stops at the first day with zero cards.
-
-**Worked example.** Using our table, you studied Monday, Tuesday and Wednesday. Walking back from Wednesday: Wednesday yes, Tuesday yes, Monday yes, Sunday no. Stop.
-
-```
-Streak = 3 days
-```
-
-If you skip Thursday entirely, then on Thursday evening it still says 3, because it falls back to Wednesday. If you also skip Friday, it drops to 0.
-
-#### Minutes today
-
-Simply the time from today's sessions added up. On Wednesday in our table, **4 minutes**.
-
-#### The donut
-
-A ring split into four coloured slices, one for each card state. The size of a slice is that state's share of your whole collection.
-
-**Worked example.** You have 100 cards: 40 New, 20 Learning, 25 Young, 15 Mature.
-
-```
-New      40 ÷ 100 = 40% of the ring
-Learning 20 ÷ 100 = 20% of the ring
-Young    25 ÷ 100 = 25% of the ring
-Mature   15 ÷ 100 = 15% of the ring
-```
-
-A slice with almost nothing in it is not drawn at all, so a 1-card sliver does not turn into an ugly line.
-
-**What to look for:** at the start your donut is mostly New. That is normal. Over months you want the Mature slice growing. That slice is the actual point of the app.
-
----
-
-### 10.2 The Stats screen, number by number
+In our three-day table, current streak = **3**.
 
 #### Reviews today
 
-**What it is:** how many cards you answered today.
+How many cards you answered today. From the table, Wednesday = **8**.
 
-**The sum:** add up `studied` from every session that happened today.
+Important: this counts **answers**, not cards. Press Again and the card returns later in the same session, and answering it again adds 1 more. So 8 answers might be 6 different cards, two seen twice.
 
-**Worked example:** Wednesday in our table is **8**.
-
-Important: this counts **answers**, not cards. If you press Again on a card it comes back later in the same session, and answering it again adds 1 more. So 8 answers might be 6 different cards, two of which you saw twice.
-
-#### Goal
-
-**What it is:** your daily target, and how close you are.
-
-**The sum:**
+Underneath, your goal progress:
 
 ```
 Goal % = reviews today ÷ your goal × 100, capped at 100
 ```
 
-**Worked example.** The default goal is 40. Today you did 8.
+With the default goal of 40 and 8 done today:
 
 ```
 8 ÷ 40 = 0.2
 0.2 × 100 = 20%
 ```
 
-So it reads **goal 40, 20% there**. Do 40 or more and it says 100%. It never goes above 100, so a huge day does not read 300%.
-
-You can change the goal in Settings. It is a target, nothing enforces it.
-
-#### Current streak and best streak
-
-Current streak is explained above: **3 days** in our example.
-
-Best streak is the longest run of consecutive days you have ever managed. Memori lists every day you studied, sorts them, and finds the longest unbroken chain.
-
-**Worked example.** Suppose you have studied on these days:
-
-```
-Jan 1, Jan 2, Jan 3,   [gap],   Jan 8, Jan 9,   [gap],   Jan 15
-```
-
-```
-Chain 1: Jan 1 to Jan 3  = 3 days
-Chain 2: Jan 8 to Jan 9  = 2 days
-Chain 3: Jan 15          = 1 day
-
-Best streak = 3 days
-```
+It reads **goal 40, 20% there**. It never goes above 100%, so a huge day does not read 300%.
 
 #### Retention
 
-**This is the one people misread most, so read this bit twice.**
+**This is the one people misread most. Read this bit twice.**
 
-**What it is:** out of every answer you have ever given, the share that were right. It is your all-time accuracy.
-
-**The sum:**
+Out of every answer you have ever given, the share that were right. Your all-time accuracy.
 
 ```
 Retention = total correct ÷ total studied × 100
 ```
 
-**Worked example.** From our table, 26 right out of 30 answers.
+From our table:
 
 ```
 26 ÷ 30 = 0.8666...
 0.8666... × 100 = 86.66...
-rounded = 87%
+rounds to 87%
 ```
 
-It shows **87%**.
-
-**What counts as "correct":**
+**What counts as correct:**
 
 | Mode | Correct | Not correct |
 | --- | --- | --- |
@@ -576,110 +964,91 @@ It shows **87%**.
 | Flip | I know it | Still learning |
 | Quiz | Right option | Wrong option |
 
-So Hard counts as a success. You did remember it, it was just slow.
+Hard counts as a success. You did remember it, it was just slow.
 
-**Now the important bit: what is a good number?**
+**Now the important part: what is a good number?**
 
-Your instinct will be that higher is better and 100% would be perfect. **That is wrong,** and it is worth understanding why.
+Your instinct says higher is better and 100% would be perfect. **That is wrong.**
 
-If you score 100%, every single card you were shown was one you already knew solidly. You did not need to see any of them. You spent that time confirming things instead of learning things.
+If you score 100%, every card you were shown was one you already knew solidly. You did not need to see any of them. You spent that time confirming rather than learning.
 
-If you score 50%, you are being shown cards long after you forgot them, and you are basically relearning from scratch every time. That is slow and demoralising.
+If you score 50%, you are being shown cards long after you forgot them, and you are relearning from scratch every time. Slow and demoralising.
 
-**The sweet spot is around 85 to 90 percent.** At that level you are being pushed just hard enough that recalling takes effort, and effort is what makes memory stick. A little bit of forgetting is the engine, not the failure.
+**The sweet spot is around 85 to 90 percent.** At that level you are being pushed just hard enough that recall takes effort, and effort is what builds memory. A bit of forgetting is the engine, not the failure.
 
-So 87% in our example is a healthy number. If yours sits at 97% for weeks, consider raising your target retention setting, which will space cards further apart and make them harder.
+So 87% is healthy. If yours sits at 97% for weeks, raise your target retention so cards space out further and get harder.
 
-**One warning.** This number covers your entire history, forever. After a thousand reviews, one bad day barely moves it. That makes it a good long-run health check and a useless daily one. For "how am I doing right now", use the Accuracy trend line instead.
+**One warning.** This number covers your entire history forever. After a thousand reviews, one bad day barely moves it. Good long-run health check, useless as a daily one. For "how am I doing right now", use the Accuracy trend.
 
 #### Mature cards
 
-**What it is:** how many of your cards have an interval of 21 days or more.
+How many cards have an interval of 21 days or more.
 
-**Worked example.** 100 cards, 15 of them at 21 days or longer.
+Shown as, for example, **15**, with "of 100, interval past 21 days" underneath.
 
-```
-Mature cards = 15
-Shown as: 15, of 100, interval past 21 days
-```
-
-This is arguably the truest measure of progress in the whole app. It is not how much you have studied, it is how much has actually stuck.
+This is arguably the truest measure of progress in the whole app. Not how much you have studied, but how much has actually stuck. It is also the number that predicted exam performance in the medical school research quoted in section 4.
 
 #### Time studied
 
-**What it is:** every session's length added together.
+Every session length added together. From our table, 5 + 6 + 4 = **15m**. Once it passes an hour it shows as hours, such as "3h 25m".
 
-**The sum:** add up every session's duration, convert to minutes, and show hours once it passes 60.
-
-**Worked example.** 5 + 6 + 4 = 15 minutes, shown as **15m**.
-
-If you had 3 hours and 25 minutes it would show **3h 25m**.
-
-#### Seconds per card
-
-**What it is:** your average speed.
-
-**The sum:**
+Underneath, **seconds per card**:
 
 ```
 Seconds per card = total seconds ÷ total answers
 ```
 
-**Worked example.** 15 minutes is 900 seconds, spread over 30 answers.
+15 minutes is 900 seconds over 30 answers:
 
 ```
 900 ÷ 30 = 30.0
 ```
 
-It shows **30.0s per card**.
+Shows **30.0s per card**.
 
-**What to do with it.** Most people settle somewhere between 5 and 15 seconds. If yours is much higher, your cards are probably too big. A card asking "explain the circle of fifths" is really eight cards pretending to be one. Split it up. Small cards are answered faster, remembered better and are less painful to review.
+**What to do with it.** Most people settle between 5 and 15 seconds. Much higher and your cards are too big, see Rule 2 in section 5.
 
 #### Avg stability
 
-**What it is:** the average interval across every card you have actually studied. New cards are ignored, because they do not have an interval yet.
-
-**The sum:**
+The average interval across every card you have actually studied. New cards are ignored, because they have no interval yet.
 
 ```
-Avg stability = (add up the intervals of all studied cards) ÷ (how many studied cards)
+Avg stability = sum of intervals of studied cards ÷ number of studied cards
 ```
 
-**Worked example.** You have 5 studied cards with intervals of 3, 8, 20, 21 and 50 days, plus 40 new cards.
+**Example.** Five studied cards with intervals of 3, 8, 20, 21 and 50 days, plus 40 new cards:
 
 ```
 3 + 8 + 20 + 21 + 50 = 102
 102 ÷ 5 = 20.4
-rounded = 20 days
+rounds to 20 days
 ```
 
-It shows **20d**. The 40 new cards are not part of the sum at all.
+Shows **20d**. The 40 new cards are not in the sum at all.
 
-**The subtitle says "days until recall drops to 90%".** That is not a poetic phrase, it is literally what an interval means in this app. A 20 day interval is Memori's estimate that after 20 days you have about a 90% chance of still remembering. That is why this number is called stability.
+The subtitle says *"days until recall drops to 90%"*. That is not poetic, it is literally what an interval means here. A 20 day interval is Memori's estimate that after 20 days you have about a 90% chance of still remembering.
 
-**What to look for:** this should climb slowly over months. A rising average means your collection is genuinely moving into long term memory. If it stalls, you are probably adding new cards faster than you are maturing old ones.
+**What to look for:** this should climb slowly over months. If it stalls, you are adding new cards faster than you are maturing old ones.
 
 ---
 
-### 10.3 The charts
+### 18.2 Study activity (the heatmap)
 
-#### The heatmap
+A grid of small squares. Each square is one day, covering the last **15 weeks**. Columns are weeks, rows are days. A **Less** to **More** legend sits underneath.
 
-**What it is:** a grid of small squares. Each square is one day. It covers the last **15 weeks**, so about 105 days. Columns are weeks, rows are days of the week.
+**How the shading works.** This surprises people: the colours are **relative to your own busiest day**, not to any fixed number.
 
-**How the shading works.** This is the part that surprises people. The colours are **relative to your own busiest day**, not to any fixed number.
-
-Memori looks at the 15 weeks on screen, finds the day you studied most, and calls that the maximum. Then every day is shaded by comparison:
+Memori finds the day you studied most in the window and calls that the maximum. Then:
 
 | Cards that day | Shade |
 | --- | --- |
 | 0 | Empty |
-| More than 0, under 25% of your best day | Lightest |
+| More than 0, under 25% of your best | Lightest |
 | 25% to 49% | Light |
 | 50% to 74% | Dark |
 | 75% or more | Darkest |
 
-**Worked example.** Your busiest day in the window was **40 cards**. So the thresholds are:
+**Example.** Your busiest day was **40 cards**:
 
 ```
 25% of 40 = 10
@@ -687,40 +1056,42 @@ Memori looks at the 15 weeks on screen, finds the day you studied most, and call
 75% of 40 = 30
 ```
 
-| That day you did | Which shade |
+| That day you did | Shade |
 | --- | --- |
-| 0 cards | empty |
-| 3 cards | lightest |
-| 9 cards | lightest |
-| 10 cards | light |
-| 19 cards | light |
-| 20 cards | dark |
-| 29 cards | dark |
-| 30 cards | darkest |
-| 40 cards | darkest |
+| 0 | empty |
+| 3 | lightest |
+| 9 | lightest |
+| 10 | light |
+| 19 | light |
+| 20 | dark |
+| 29 | dark |
+| 30 | darkest |
+| 40 | darkest |
 
-**A consequence worth knowing.** If you have one monster day of 200 cards, it drags the scale so far up that all your normal 20 card days look nearly empty. The heatmap is about **consistency**, not volume. Do not chase dark squares, chase an unbroken grid.
+**A consequence worth knowing.** One monster day of 200 cards drags the scale so far up that all your normal 20-card days look nearly empty. The heatmap is about **consistency**, not volume. Chase an unbroken grid, not dark squares.
 
-#### Reviews, last 14 days
+---
 
-**What it is:** one bar per day for the last two weeks. Each bar is split into two colours: how many you recalled, and how many you forgot.
+### 18.3 Reviews, last 14 days
 
-**How bar height works.** Heights are relative to the busiest of those 14 days, same idea as the heatmap.
+One bar per day for the last fortnight, each split into two colours with a legend reading **recalled** and **forgotten**.
 
-```
-Bar height = cards that day ÷ busiest day in the 14 × 100%
-```
-
-with a minimum of 7% so a tiny day is still visible, and a flat 3% stub for days you did nothing.
-
-**How the split works.**
+**Bar height** is relative to the busiest of those 14 days:
 
 ```
-Recalled part = correct ÷ studied × 100%
+Bar height = cards that day ÷ busiest day × 100%
+```
+
+with a minimum of 7% so a tiny day is still visible, and a 3% stub for days you did nothing.
+
+**The split:**
+
+```
+Recalled part  = correct ÷ studied × 100%
 Forgotten part = (studied - correct) ÷ studied × 100%
 ```
 
-**Worked example.** Tuesday from our table: 12 studied, 11 correct.
+**Example.** Tuesday: 12 studied, 11 correct.
 
 ```
 forgotten = 12 - 11 = 1
@@ -728,21 +1099,55 @@ recalled  = 11 ÷ 12 = 0.9166... = 92%
 forgotten =  1 ÷ 12 = 0.0833... =  8%
 ```
 
-So Tuesday's bar is 92% one colour and 8% the other.
+So Tuesday's bar is 92% teal and 8% red.
 
-**What to look for.** A red section that keeps growing means either your cards are too hard, or you are pressing Good on things you did not really know, or your target retention is set too low.
+**What to look for.** A red section that keeps growing means either your cards are too hard, or you are pressing Good on things you did not really know, or your target retention is too low.
 
-#### Accuracy trend
+---
 
-**What it is:** a line showing your accuracy on each of the last 14 days.
+### 18.4 Coming up
 
-**The sum, for each day:**
+Shows what is already booked in for the next three weeks.
+
+**The bar chart.** 21 bars, one per day, today in a different colour. Labels read **Today** on the left and **3 weeks** on the right.
+
+These bars count **only cards with a real scheduled date**. Brand new cards are deliberately excluded, because a new card has no due date, and piling them all onto today made a fresh deck look like an enormous spike.
+
+**The new card note.** If you have cards that have never been reviewed, a small box says so:
+
+> 3 new cards are ready, no date yet
+
+**The day-by-day breakdown.** Under the chart, one row per day that actually has cards. Empty days are skipped.
+
+Each row shows:
+
+| Part | What it is |
+| --- | --- |
+| **Left** | The day: "Today", "Tomorrow", or a short date like "Sat 2 Aug" |
+| **Middle** | One chip per deck, each with a coloured square in that deck's own colour, the deck name, and the count |
+| **Right** | The total for that day |
+
+**Example row:**
+
+```
+Tomorrow    [■ Music 2]  [■ Spanish 1]              3 cards
+```
+
+At most six rows are shown. If there are more days beyond that, a small line says "and 4 more days".
+
+**What to look for.** You want something reasonably flat. A single enormous spike three weeks out means you added a big batch of cards on the same day and they are all coming back together. Smooth it by doing a few early, or by adding new cards in smaller batches.
+
+---
+
+### 18.5 Accuracy trend
+
+A line showing your accuracy on each recent study day.
 
 ```
 That day's accuracy = correct that day ÷ studied that day
 ```
 
-**Worked example.** Our three days:
+**Example.** Our three days:
 
 ```
 Monday:    8 ÷ 10 = 0.80 = 80%
@@ -750,38 +1155,28 @@ Tuesday:  11 ÷ 12 = 0.9166 = 92%
 Wednesday: 7 ÷  8 = 0.875 = 88%
 ```
 
-The line joins 80%, 92%, 88%.
+The line joins 80%, 92%, 88%. Axis labels read 0% and 100%.
 
 **Two things to know.**
 
-1. Days you did not study are **skipped**, not drawn as zero. A rest day does not put a hole in your line.
-2. The chart needs **at least 2 study days** to appear. With one day there is nothing to draw a line between.
+1. Days you did not study are **skipped**, not drawn as zero. A rest day does not punch a hole in your line.
+2. It needs **at least 2 study days** to appear. Until then you see: *"Study a few more days to see your accuracy trend."*
 
-**Retention versus this line.** Retention is your whole life. This is your last fortnight. If Retention says 87% but this line has been sitting at 70% all week, something changed recently and the lifetime number is hiding it.
+**Retention versus this line.** Retention is your whole life. This is recent. If Retention says 87% but this line has sat at 70% all week, something changed lately and the lifetime number is hiding it.
 
-#### Coming up
+---
 
-**What it is:** a bar for each of the next 21 days, showing how many cards are already booked in for that day.
+### 18.6 Your forgetting curve
 
-**How it is worked out.** For each of the next 21 days, count every card whose due date lands on that day. Today's bar is a different colour so you can pick it out.
+The most useful chart here once you understand it. It shows how memory of a typical card of yours fades, and marks the moment Memori will bring it back.
 
-**Worked example.** You have 4 cards due Thursday, 9 due Friday, 0 due Saturday, 12 due Sunday. Those four bars will be small, medium, empty and tallest, scaled against the tallest.
-
-**What to look for.** You are hoping for something reasonably flat. A single enormous spike three weeks out means you added a big batch of cards on the same day and they are all coming back together. You can smooth that out by doing a few of them early, or by adding new cards in smaller batches spread over several days.
-
-**One quirk, so it does not confuse you.** Every **new** card is piled onto today's bar, because a card you have never seen has no due date. So a fresh deck of 200 cards makes today's bar enormous even though your daily limit means you will only see 20. Today's bar means "could come up", the rest of the bars mean "will come up".
-
-#### Your forgetting curve
-
-**What it is:** the single most useful chart in the app once you understand it. It shows how your memory of a typical card fades over time, and marks the moment Memori has decided to show it to you again.
-
-**The curve.** Memori takes your **average stability** and calls it `S`. Then for any number of days `t`, your chance of still remembering is:
+**The curve.** Memori takes your **average stability** and calls it `S`. For any number of days `t`:
 
 ```
 recall = 0.9 ^ (t ÷ S)
 ```
 
-**Worked example** with an average stability of 20 days:
+**Worked example** with average stability of 20 days:
 
 | Days since you saw it | The sum | Chance you still remember |
 | --- | --- | --- |
@@ -792,77 +1187,90 @@ recall = 0.9 ^ (t ÷ S)
 | 40 | 0.9 ^ (40 ÷ 20) = 0.9 ^ 2 | 81.0% |
 | 60 | 0.9 ^ (60 ÷ 20) = 0.9 ^ 3 | 72.9% |
 
-See the 20 day row. At exactly your average stability, you are at exactly 90%. That is what stability means, and it is why the number is defined the way it is.
+Look at the 20 day row. At exactly your average stability you are at exactly 90%. That is what stability means, and why it is defined that way.
 
-**The dotted line.** The vertical marker is where your **target retention** setting crosses the curve. That is the day Memori will bring the card back.
+The chart marks **90%** and **50%** lines, and the horizontal axis runs from **0d** to your domain.
+
+**The dotted marker.** A vertical line where your **target retention** crosses the curve. That is the day the card comes back.
 
 ```
 Day it comes back = S × ln(target ÷ 100) ÷ ln(0.9)
 ```
 
-**Worked example** with S of 20 days:
+With S of 20 days:
 
-| Your target | Where the line sits |
+| Your target | Marker lands at |
 | --- | --- |
 | 80% | 42.4 days |
 | **90%** | **20.0 days** |
 | 95% | 9.7 days |
 
-That is the whole retention setting in one picture. Raise the target and the dotted line slides left, giving you shorter gaps and more reviews. Lower it and the line slides right, giving you fewer reviews and more forgetting.
+That is the entire retention setting in one picture. Raise the target and the line slides left, giving shorter gaps and more reviews. Lower it and it slides right.
 
-The chart needs at least one studied card to appear.
+The caption underneath says so:
+
+> Modelled for a card with your average stability. The scheduler picks the moment the curve crosses your target retention.
+
+Needs at least one studied card to appear.
 
 ---
 
-### 10.4 Collection makeup and per-deck bars
+### 18.7 Overall breakdown and Per deck progress
 
-Below the charts is a breakdown of your whole collection by state, and then one bar per deck.
+**Overall breakdown** is the same donut as the Home screen, with your total in the middle and the four states in the legend.
 
-**Each deck's bar** is split by state, and the percentage next to it is:
+**Per deck progress** lists every deck with a bar and a percentage:
 
 ```
 Mastered % = mature cards in that deck ÷ total cards in that deck × 100
 ```
 
-**Worked example.** A deck with 50 cards, of which 12 are Mature.
+A deck with 50 cards of which 12 are Mature:
 
 ```
-12 ÷ 50 = 0.24
-0.24 × 100 = 24%
+12 ÷ 50 = 0.24 → 24%
 ```
 
-It shows **24%**. Tap the bar to jump straight into that deck.
+Tap a bar to jump into that deck.
 
 ---
 
-### 10.5 A cheat sheet for the whole Stats screen
+### 18.8 Cheat sheet
 
 | Number | One line version | Healthy sign |
 | --- | --- | --- |
-| Reviews today | Answers given today | Anywhere near your goal |
-| Goal % | Today ÷ goal | Reaching 100% most days |
+| Reviews today | Answers given today | Near your goal |
+| Goal % | Today ÷ goal | Hitting 100% most days |
 | Current streak | Days in a row | Any unbroken number |
-| Best streak | Longest run ever | Being beaten occasionally |
+| Best streak | Longest ever run | Being beaten occasionally |
 | Retention | Lifetime accuracy | **85 to 90%**, not higher |
-| Mature cards | Cards past 21 days | Going up every month |
-| Time studied | Total minutes ever | However much you can spare |
+| Mature cards | Cards past 21 days | Rising every month |
+| Time studied | Total minutes ever | Whatever you can spare |
 | Seconds per card | Average speed | 5 to 15 seconds |
 | Avg stability | Average gap in days | Slowly climbing |
 | Heatmap | Consistency | Few gaps, not dark squares |
 | 14 day bars | Recent volume and errors | Small red portion |
-| Accuracy trend | Recent accuracy | Flat, around 85 to 90% |
 | Coming up | Workload ahead | Fairly flat, no huge spike |
-| Forgetting curve | Your memory model | Marker where you expect it |
+| Accuracy trend | Recent accuracy | Flat, 85 to 90% |
+| Forgetting curve | Your memory model | Marker where you expect |
 
 ---
 
-## 11. Settings, one by one
+## 19. The Settings screen
 
-### Target retention
+Three sections: Studying, Appearance, Your data. Plus an About block.
 
-**What it does:** decides how often you see your cards. This is the most powerful setting in the app, and the easiest to set badly.
+### Studying
 
-It is the chance you want of remembering a card **at the moment it comes back**. Memori turns your percentage into a multiplier:
+#### Target retention
+
+A slider, showing the current value in the heading, for example **Target retention: 90%**.
+
+**Range: 70% to 97%.**
+
+The caption reads: *"Higher means shorter intervals and more reviews. Around 90% is the usual sweet spot."*
+
+This is the most powerful setting in the app and the easiest to set badly. It is the chance you want of remembering a card at the moment it comes back. Memori turns the percentage into a multiplier:
 
 ```
 multiplier = ln(your target ÷ 100) ÷ ln(0.9)
@@ -876,157 +1284,261 @@ You do not need to follow that. Here is the table:
 | 80% | 2.12 | 42 days | Relaxed |
 | 85% | 1.54 | 31 days | Slightly relaxed |
 | **90%** | **1.00** | **20 days** | **The default. Leave it here.** |
-| 95% | 0.49 | 10 days | Demanding, roughly double the workload |
+| 95% | 0.49 | 10 days | Demanding, roughly double the work |
 | 97% | 0.29 | 6 days | Exam panic mode |
 
 The multiplier is applied **once**, when the due date is set. It does not pile up over time, so switching between settings never corrupts your schedule.
 
-**Practical advice.** Leave it at 90 unless you have a specific reason. Raise it to 95 in the fortnight before an exam and put it back afterwards. Drop it to 85 if you are drowning and want fewer daily reviews.
+**Practical advice.** Leave it at 90 unless you have a reason. Raise to 95 in the fortnight before an exam and put it back after. Drop to 85 if you are drowning.
 
-### New cards per day
+#### New / day
 
-**Default: 20.** The most brand new cards Memori will introduce in one day, across your whole collection.
+**Default: 20.** The most brand new cards Memori will introduce in one day, across everything.
 
-This is the throttle on your future workload, and people set it far too high. Every new card you take on today becomes a small permanent review obligation forever.
-
-**Rough guide:** each new card generates roughly 8 to 10 reviews over the following year. So 20 new per day means around 200 daily reviews once things settle. If that sounds like a lot, it is, and that is exactly why the limit exists.
+This is the throttle on your future workload, and people set it far too high. See Rule 4 in section 5.
 
 This is a genuine daily limit. Do 20 today and you get no more until tomorrow, even if you close and reopen the app.
 
-### Reviews per day
+#### Reviews / day
 
-**Default: 200.** The most already-seen cards Memori will hand you in one day.
+**Default: 200.** The most already-seen cards you will be handed in a day.
 
-Useful as a safety valve if you take a fortnight off and come back to a mountain. Rather than 900 cards in one sitting, you get 200 a day until you are level again.
+A safety valve. Take a fortnight off and come back to a mountain, and rather than 900 cards in one sitting you get 200 a day until you are level.
 
-### Daily goal
+#### Daily goal
 
-**Default: 40.** Purely a target for the progress percentage on the Stats screen. Nothing is blocked or unlocked by it. Set it to whatever keeps you honest.
+**Default: 40.** Purely the target for the progress percentage on the Stats screen. Nothing is blocked or unlocked by it.
 
-### Longest interval
+#### Longest interval, days
 
-**Default: 3650 days**, which is 10 years. No card will ever be scheduled further out than this. There is rarely a reason to change it. Setting it to 365 forces every card to be checked at least once a year.
+**Default: 3650**, which is 10 years. No card will ever be scheduled further out. Set it to 365 to force everything to be checked at least once a year.
 
-### Shuffle the queue
+#### Shuffle the queue
 
-**Default: on.** Mixes due cards and new cards into a random order rather than a fixed one. Worth keeping on, because a fixed order lets you accidentally memorise the sequence rather than the content.
+**Default: on.** Caption: *"Mix due and new cards instead of a fixed order."*
 
-### Play the first audio clip on reveal
+Worth keeping on, because a fixed order lets you accidentally memorise the sequence rather than the content.
 
-**Default: on.** When you reveal an answer, the first sound on the back plays by itself. Very useful for pronunciation decks. Turn it off if you study in public.
+#### Play the first audio clip on reveal
 
-### Theme
+**Default: on.** Caption: *"Useful for pronunciation decks."*
 
-**System**, **Light** or **Dark**. System follows your device and switches live when your device does, including automatically at sunset if your phone is set up that way.
+When you reveal an answer, the first sound on the back plays by itself. Turn it off if you study in public.
+
+### Appearance
+
+Three buttons:
+
+| Option | Icon | What it does |
+| --- | --- | --- |
+| **System** | 🖥️ | Follows your device, and switches live when your device does |
+| **Light** | ☀️ | Always light |
+| **Dark** | 🌙 | Always dark |
+
+### Your data
+
+A line showing **how many decks and cards** you have, and *"Stored privately on this device."*
+
+Then three actions:
+
+| Button | What it does |
+| --- | --- |
+| **Back up all data** | *"Download a .json file of everything."* |
+| **Restore from backup** | *"Import a .json backup file."* |
+| **Erase all data** | *"Delete your decks and stats, restore the starter deck."* |
+
+Covered properly in section 22.
+
+### About
+
+> Memori schedules reviews with spaced repetition. Each answer updates the card's interval and ease, and the next date is when your recall is predicted to drop to your target retention.
+
+Then a live count: **Cards: 23, decks: 1, reviews logged: 47**.
+
+And:
+
+> Free and open. Runs entirely in your browser: no account, no servers, no tracking.
+
+---
+---
+
+# Part 4: Reference
+
+## 20. Every message the app can show you
+
+### Small pop-up messages (toasts)
+
+These appear briefly at the bottom and disappear on their own.
+
+| Message | What just happened |
+| --- | --- |
+| **Deck deleted** | You deleted a deck |
+| **Progress reset** | You reset a card's schedule |
+| **Add a front and a back** | You tried to save a card missing one side |
+| **Could not add file** | An image or sound failed to attach |
+| **Recording not supported here** | Your browser has no microphone recording |
+| **Microphone permission needed** | You declined the mic prompt |
+| **Add some cards first** | You tried to study an empty deck |
+| **Nothing due. Great work!** | You pressed Review with nothing due |
+| **Need at least 2 cards with answers** | Quiz has nowhere to get wrong options |
+| **Backup downloaded** | Your .json file was saved |
+| **Backup failed** | Something went wrong saving it |
+| **Data restored** | A backup was loaded successfully |
+| **Invalid backup file** | The file was not a Memori backup |
+| **Reset to starter deck** | You erased everything |
+
+### Questions the app asks before doing something
+
+These need a yes or no, because they cannot be undone.
+
+| When | What it asks |
+| --- | --- |
+| Deleting a deck | Confirms by name, and warns the cards go too |
+| Resetting a card | *"Reset this card to new? It becomes due now. Past reviews stay in your stats."* |
+| Deleting a card | *"Delete this card?"* |
+| Restoring a backup | *"Restore will replace everything currently in Memori. Continue?"* |
+| Erasing everything | *"Erase all your decks, cards, and stats and restore the General Knowledge starter deck? This cannot be undone."* |
 
 ---
 
-## 12. Your data, backup and restore
+## 21. Keyboard shortcuts
 
-### Where your cards live
-
-On your device, in your browser's own storage, in a database called `memori-db`.
-
-- Decks, cards and study history go in one part of it
-- Pictures and sounds go in a separate part, so big files never slow down the rest
-
-Nothing is uploaded anywhere. There is no account, no server, no analytics. The app makes zero outbound requests.
-
-### The one real risk, and how to avoid it
-
-Browsers are allowed to clear website storage when a device runs low on space. And if you ever click "clear browsing data" and include site data, Memori goes with it.
-
-**So back up.** Settings, **Back up all data**. You get one `.json` file containing everything: decks, cards, study history, and every picture and sound encoded inside it. Keep it somewhere real, like a cloud drive.
-
-### Moving to a new device
-
-1. On the old device: Settings, **Back up all data**, save the file
-2. Get the file onto the new device
-3. On the new device: open Memori, Settings, **Restore from backup**, choose the file
-
-Everything comes across, including your streak and history.
-
-### Erase all data
-
-Wipes everything and puts the starter deck back. There is no undo. Back up first.
-
----
-
-## 13. Keyboard shortcuts
-
-Only relevant on a computer, but they make studying much quicker.
+Only on a computer, but they make studying much faster.
 
 | Key | What it does |
 | --- | --- |
 | `Space` or `Enter` | Reveal the answer. Press again to grade it Good. |
-| `1` | Again, in Review mode. Still learning, in Flip mode. |
-| `2` | Hard, in Review. I know it, in Flip. |
-| `3` | Good, in Review. |
-| `4` | Easy, in Review. |
-| `1` to `4` | Pick that option, in Quiz. |
-| `Enter` | Next question, in Quiz. |
-| `Esc` | Leave the session. |
+| `1` | Again (Review) / Still learning (Flip) |
+| `2` | Hard (Review) / I know it (Flip) |
+| `3` | Good (Review) |
+| `4` | Easy (Review) |
+| `1` to `4` | Pick that option (Quiz) |
+| `Enter` | Next question (Quiz) |
+| `Esc` | Leave the session |
 
-Shortcuts are ignored while you are typing in a box, so they will not fire while you are writing a card.
+Shortcuts are ignored while you are typing in a box, so they will not fire while writing a card.
 
 ---
 
-## 14. Questions people ask
+## 22. Your data, backups, and moving devices
+
+### Where it lives
+
+On your device, in your browser's own storage, in a database called `memori-db`.
+
+- Decks, cards and study history in one part
+- Images and sounds as separate blobs, so big files never slow the rest down
+
+Nothing is uploaded anywhere. No account, no server, no analytics. The app makes zero outbound requests.
+
+### The one real risk
+
+Browsers are allowed to clear website storage when a device runs low on space. And if you ever click "clear browsing data" and include site data, Memori goes with it.
+
+**So back up.** Settings, **Back up all data**. You get one `.json` file containing everything: decks, cards, study history, and every image and sound encoded inside it. Keep it somewhere real, like a cloud drive.
+
+### Moving to a new device
+
+1. Old device: Settings, **Back up all data**, save the file
+2. Get the file onto the new device
+3. New device: Settings, **Restore from backup**, choose the file
+
+Everything comes across, including your streak and history.
+
+**Restoring replaces everything.** It is not a merge. The app warns you first.
+
+### Erase all data
+
+Wipes everything and puts the starter deck back. No undo. Back up first.
+
+---
+
+## 23. Questions people ask
 
 **Is it really free?**
-Yes. No account, no subscription, no advertising, no paid tier. The code is here for you to read.
+Yes. No account, no subscription, no ads, no paid tier. The code is here to read.
 
 **Do I need the internet?**
-Only to load the page. Once it is open, everything works with no connection, because your cards are on your device.
+Only to load the page. Once open, everything works with no connection, because your cards are on your device.
 
 **Does it sync between my phone and my laptop?**
 No. Each device keeps its own copy. Use Back up and Restore to move between them.
 
-**Why is it saying "Nothing due"?**
-Because nothing is due. Every card is scheduled for a later day. Studying them early would make them stick less well. Add new cards, or use Flip mode if you really want to run through the deck anyway.
+**Why does it say "Nothing due"?**
+Because nothing is due. Every card is scheduled for a later day. Studying early would make them stick less well. Use **Revise** if you want to run through a deck anyway.
 
 **I did 20 new cards and it will not give me more. Why?**
-That is the daily new card limit doing its job, and it is protecting your future self. Raise it in Settings if you really mean it, but read the New cards per day section first.
+The daily new card limit, protecting your future self. Raise it in Settings if you really mean it, but read section 5 Rule 4 first.
 
 **Should I press Hard or Again?**
-Did you get it right? If yes, Hard. If no, Again. It really is that simple. Hard is not "I got it wrong but only just".
+Did you get it right? If yes, Hard. If no, Again. Hard is not "wrong but only just".
 
 **My retention is 97%. Is that great?**
-No, it means you are reviewing too often and wasting time on cards you already know. Aim for 85 to 90%. See the Retention section above.
+No. It means you are reviewing too often and wasting time on cards you already know. Aim for 85 to 90%. See section 18.1.
+
+**What is the difference between Flip and Review?**
+Review is real and changes your schedule. Flip is practice and changes nothing. Section 14.
+
+**Can I study just my starred cards?**
+Yes, on the deck screen tap the star button next to the search box to filter, then start a session.
 
 **How many cards should a deck have?**
-There is no limit that matters. What matters is that each individual card is small. One card, one fact.
+No limit that matters. What matters is that each card is small. One card, one fact.
 
 **Can I use this for languages, medicine, law, anything?**
-Yes. Nothing in the app knows or cares what your cards are about. The music theory starter deck is just a starting point, and you can delete it.
+Yes. The app has no idea what your cards are about. Delete the music theory starter deck and build whatever you want.
 
 **Can I share a deck with a friend?**
-Send them your backup file. They can restore it. Note that restoring replaces their collection, so it is best for a fresh install.
+Send them your backup file. Note that restoring replaces their collection, so it is best for a fresh install.
+
+**What happens if I answer a card wrong in Review?**
+It comes back later in the same session, and its interval resets to 0 so it returns today. A lapse is recorded on the card.
 
 ---
 
-## 15. For developers
+## 24. When something goes wrong
+
+| Problem | Likely cause and fix |
+| --- | --- |
+| **The app is empty after it was working** | Browser cleared site storage. Restore from your backup. This is why backups matter. |
+| **Recording does nothing** | Microphone permission was declined, or the browser does not support it. Check your browser's site permissions. |
+| **Quiz will not start** | You need at least 2 cards with answer text in that deck. |
+| **Review will not start** | Nothing is due. Use Revise, or add new cards. |
+| **My streak reset unfairly** | The streak allows today to be empty, but breaks if a full day passes with nothing. |
+| **Coming up shows a huge spike** | You added a large batch of cards on the same day. Spread new cards over several days. |
+| **The install option does not appear** | You must be on `https`, and on iPhone you must use Safari, not Chrome. |
+| **Audio does not autoplay** | Some browsers block autoplay until you interact with the page. Tap the player once. |
+
+---
+
+## 25. For developers
 
 ### What it is built from
 
-Plain JavaScript on React, with the Plus Jakarta Sans typeface, IndexedDB for storage and the MediaRecorder API for microphone capture. No build step, no bundler to run, no dependencies to install.
+Plain JavaScript on React, with the Plus Jakarta Sans typeface, IndexedDB for storage and the MediaRecorder API for microphone capture. No build step, no bundler, no dependencies to install.
 
 ### The repository
 
 ```
-Memori/
-├── index.html      the entire app, roughly 450 KB
+memori/
+├── index.html              the entire app
+├── manifest.webmanifest    makes it installable
+├── assets/
+│   ├── icon-192.png
+│   ├── icon-512.png
+│   ├── icon-maskable-512.png
+│   └── favicon.png
 ├── README.md
 └── LICENSE
 ```
 
-`index.html` is a self extracting bundle. Everything is inside it: the React runtime, the fonts, the icons, and the web app manifest, which is embedded as a `data:` URL so no second file is needed.
+`index.html` is a self extracting bundle. The React runtime, the fonts and the app are all inside it.
 
 ### Running it locally
 
 Download `index.html` and open it. That is the whole setup.
 
-For a proper origin, which you want if you are testing installability:
+For a proper origin, which you need to test installability:
 
 ```bash
 python3 -m http.server 8080
@@ -1043,30 +1555,39 @@ then open <http://localhost:8080>.
 
 ### The scheduling algorithm
 
-An SM-2 style scheduler. Section 8 above documents the exact arithmetic. In short, every card carries an ease factor starting at 2.50 with a floor of 1.30, and an interval in days. The target retention setting is applied once when the due date is set, never compounded into the stored interval.
+An SM-2 style scheduler. Section 15 documents the exact arithmetic. Every card carries an ease factor starting at 2.50 with a floor of 1.30, and an interval in days. The target retention setting is applied once when the due date is set, never compounded into the stored interval.
+
+### Card states
+
+Bucketed purely on the stored interval:
+
+| State | Rule |
+| --- | --- |
+| New | never answered |
+| Learning | interval 1 to 6 days |
+| Young | interval 7 to 20 days |
+| Mature | interval 21 days or more |
 
 ### Offline support
 
-The app runs offline once loaded, but a cold launch with no connection still needs a service worker, which by browser rules has to be a separate file at the site root. It is not included by default because it is no longer needed for installability: Chrome dropped the service worker requirement in version 108 on mobile and 112 on desktop, and only a manifest over HTTPS is required now.
+The app runs offline once loaded, but a cold launch with no connection would need a service worker, which by browser rules must be a separate file at the site root. It is not included, because it is no longer required for installability: Chrome dropped the service worker requirement in version 108 on mobile and 112 on desktop.
 
-### Known quirks
-
-- The **Coming up** forecast places every new card on today's bar, ignoring the daily limit, so a large new deck spikes the first bar.
-- Card states are bucketed on the stored interval rather than the retention-adjusted gap, so at a high target retention a card can read Mature while returning sooner. This is deliberate: the bucket describes the memory, not the calendar.
-
-### Contributing
-
-Issues and pull requests are welcome. Things that would genuinely help:
+### Ideas that would help
 
 - Bulk import from CSV or Anki
 - Cloze deletion cards
 - Reverse cards generated from a single entry
 - A service worker for true offline launch
+- Sync through a file in a folder you already sync
+
+Issues and pull requests welcome.
 
 ---
 
-## 16. Licence
+## 26. Licence and credits
 
-MIT. Do whatever you like with it, including commercially, as long as the copyright notice stays. See [LICENSE](LICENSE).
+**MIT.** Do whatever you like with it, including commercially, as long as the copyright notice stays. See [LICENSE](LICENSE).
+
+The science this app is built on is not mine. The forgetting curve and the spacing effect come from Hermann Ebbinghaus's 1885 work *Memory: A Contribution to Experimental Psychology*, and have been confirmed by researchers repeatedly ever since. The SM-2 family of scheduling algorithms comes from the SuperMemo project.
 
 Built by [rohittabs](https://github.com/rohittabs).
